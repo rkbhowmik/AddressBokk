@@ -22,7 +22,10 @@ namespace AddressBookApp.Controllers
         // GET: Addresses
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Addresses.ToListAsync());
+            var address = _context.Addresses
+                .Include(c => c.Peoples)
+                .AsNoTracking();
+            return View(await address.ToListAsync());
         }
 
         // GET: Addresses/Details/5

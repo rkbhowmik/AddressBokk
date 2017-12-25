@@ -17,6 +17,7 @@ namespace AddressBookApp.Models
         public string CountryName { get; set; }
 
         public int PeopleID { get; set; }
-       
+        public ICollection<People> Peoples { get; set; }
+
     }
 }
