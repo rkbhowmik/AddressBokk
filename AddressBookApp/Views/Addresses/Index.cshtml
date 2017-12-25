@@ -58,7 +58,10 @@
                 @Html.DisplayFor(modelItem => item.CountryName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Peoples)
+                @Html.DisplayFor(modelItem => item.Peoples.FirstName)
+               
+                    @Html.DisplayFor(modelItem => item.Peoples.LastName)
+               
             </td>
 
             <td>
