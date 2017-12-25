@@ -16,6 +16,7 @@ namespace AddressBookApp.Models
         [StringLength(60, MinimumLength = 2)]
         [Required]
         public string LastName { get; set; }
+        [Required(ErrorMessage = "Please enter your social security number.")]
 
        public string PersonNumber { get; set; }
 
